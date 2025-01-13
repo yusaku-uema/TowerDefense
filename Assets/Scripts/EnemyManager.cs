@@ -14,10 +14,11 @@ public class EnemyManager : MonoBehaviour
     //Œo‰ßŽžŠÔ
     public float time;
 
-    void Start()
-    {
-        
-    }
+
+
+    //‚Ü‚¾‚±‚Ìwave‚ÅoŒ»‚µ‚Ä‚È‚¢“G{‰æ–Êã‚Ì“G‚Ì”
+    public int EnemyCnt => waves[wave].patterns.Count + FindObjectsOfType<Enemy>().Length;
+
 
     // Update is called once per frame
     void Update()
@@ -25,7 +26,7 @@ public class EnemyManager : MonoBehaviour
         wave = 0;
         time += Time.deltaTime;
         CreateEnemy();
-
+        
     }
 
     public void CreateEnemy()

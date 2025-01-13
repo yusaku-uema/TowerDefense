@@ -37,7 +37,8 @@ public class Enemy : MonoBehaviour
             if (pointIndex >= route.points.Length - 1)//最後まで到達した
             {
                 Destroy(gameObject);
-                //TODO プレイヤーにダメージ
+                //プレイヤーにダメージ
+                FindObjectOfType<Player>().hp--;
             }
         }
     }
