@@ -42,4 +42,15 @@ public class Enemy : MonoBehaviour
             }
         }
     }
+
+    public void OnTriggerEnter2D()
+    {
+        //gameObject.GetComponent<SpriteRenderer>().color = new Color32(255, 0, 0, 255);
+        //Invoke("back", 0.2f);
+    }
+
+    public void back()
+    {
+        gameObject.GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
+    }
 }

@@ -24,6 +24,8 @@ public class Arrow : MonoBehaviour
         if (v.magnitude < 0.7f)
         {
             targetEnemy.hp -= 1;
+            //targetEnemy.OnTriggerEnter2D();
+            
             if (targetEnemy.hp <= 0)
             {
                 Destroy(targetEnemy.gameObject);
