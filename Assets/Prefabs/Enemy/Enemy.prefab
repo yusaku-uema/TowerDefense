@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2571874797286238309}
-  - component: {fileID: 277864984108902366}
-  - component: {fileID: 1812925791422771023}
+  - component: {fileID: 7065568413837268558}
+  - component: {fileID: 2006134627626389485}
   m_Layer: 8
   m_Name: Enemy
   m_TagString: Untagged
@@ -34,23 +34,7 @@ Transform:
   - {fileID: 6282783048664083784}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &277864984108902366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6581288586092547728}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be429a0bdbdc7c74bade6b8b8a55a4b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hp: 3
-  speed: 1
-  gold: 150
-  route: {fileID: 0}
---- !u!70 &1812925791422771023
+--- !u!70 &7065568413837268558
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -85,6 +69,22 @@ CapsuleCollider2D:
   m_Offset: {x: 0.0033852458, y: 0.0025652945}
   m_Size: {x: 0.6415945, y: 0.9948694}
   m_Direction: 0
+--- !u!114 &2006134627626389485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6581288586092547728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be429a0bdbdc7c74bade6b8b8a55a4b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 3
+  speed: 1
+  gold: 50
+  route: {fileID: 0}
 --- !u!1 &7359087601147136435
 GameObject:
   m_ObjectHideFlags: 0

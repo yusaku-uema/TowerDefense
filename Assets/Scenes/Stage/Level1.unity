@@ -827,10 +827,10 @@ MonoBehaviour:
       route: {fileID: 1919031983}
   - patterns:
     - time: 0
-      enemy: {fileID: 277864984108902366, guid: 83eeb1f042de3474683efaef084e6a9c, type: 3}
+      enemy: {fileID: 2006134627626389485, guid: 83eeb1f042de3474683efaef084e6a9c, type: 3}
       route: {fileID: 1919031983}
     - time: 1
-      enemy: {fileID: 277864984108902366, guid: 83eeb1f042de3474683efaef084e6a9c, type: 3}
+      enemy: {fileID: 2006134627626389485, guid: 83eeb1f042de3474683efaef084e6a9c, type: 3}
       route: {fileID: 1919031983}
   wave: 0
   time: 0
