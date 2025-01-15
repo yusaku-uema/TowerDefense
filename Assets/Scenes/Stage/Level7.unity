@@ -1254,7 +1254,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bowPrefab: {fileID: 8597342898718755672, guid: 940040ba5c1edcf479c615ef996690a4, type: 3}
   hp: 5
-  gold: 600
+  gold: 500
   selectBow: {fileID: 0}
 --- !u!4 &265139137
 Transform:
