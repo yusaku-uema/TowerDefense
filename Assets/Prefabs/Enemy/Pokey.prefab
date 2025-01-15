@@ -83,7 +83,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 3
   speed: 1
-  gold: 50
+  gold: 100
   route: {fileID: 0}
 --- !u!1 &7359087601147136435
 GameObject:

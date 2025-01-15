@@ -133,7 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 4
   speed: 2
-  gold: 100
+  gold: 120
   route: {fileID: 0}
 --- !u!70 &1812925791422771023
 CapsuleCollider2D:
