@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be429a0bdbdc7c74bade6b8b8a55a4b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 4
+  hp: 5
   speed: 2
   gold: 120
   route: {fileID: 0}

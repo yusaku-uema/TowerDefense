@@ -217,7 +217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 15
-  speed: 0.8
+  speed: 1
   gold: 250
   route: {fileID: 0}
 --- !u!61 &6544021594775118184
