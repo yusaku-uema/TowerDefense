@@ -68,7 +68,7 @@ public class Player : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1))
         {
-            SellBow();
+           // SellBow();
         }
     }
 }
