@@ -80,9 +80,7 @@ public class GameMain : MonoBehaviour
                     }
                     break;
                 case GAME_STATE.GAME_CLEAR:
-                    stateText.text = "GAME CLEAR";
-                    yield return WaitAnyKey;
-                    SceneManager.LoadScene(0);
+                    //SceneManager.LoadScene(textAsset);
                     break;
                 case GAME_STATE.GAME_OVER:
                     stateText.text = "GAME OVER";
