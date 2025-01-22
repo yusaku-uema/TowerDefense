@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.TextCore.Text;
 using UnityEngine.UI;
 
 public class GameMain : MonoBehaviour
@@ -61,18 +62,20 @@ public class GameMain : MonoBehaviour
                     break;
                 case GAME_STATE.WAVE_CHANGE:
                     stateText.text = $"WAVE {enemyManager.wave + 1}";
-                    yield return WaitAnyKey;
+                    yield return new WaitUntil(() => Input.anyKeyDown);
                     state = GAME_STATE.GAME_PLAY;
                     break;
                 case GAME_STATE.WAVE_CLEAR:
                     if (enemyManager.wave == enemyManager.waves.Length - 1)
                     {
                         stateText.text = "WAVE CLEAR";
+                        yield return new WaitUntil(() => Input.anyKeyDown);
+                        state = GAME_STATE.GAME_CLEAR;
                     }
                     else
                     {
                         stateText.text = $"WAVE CLEAR\nBONUS + {player.gold * 20 / 100}";
-                        yield return WaitAnyKey;
+                        yield return new WaitUntil(() => Input.anyKeyDown);
                         enemyManager.wave++;
                         enemyManager.time = 0;
                         player.gold += player.gold * 20 / 100;
@@ -80,12 +83,10 @@ public class GameMain : MonoBehaviour
                     }
                     break;
                 case GAME_STATE.GAME_CLEAR:
-                    //SceneManager.LoadScene(textAsset);
+                    SceneManager.LoadScene("GameClear");
                     break;
                 case GAME_STATE.GAME_OVER:
-                    stateText.text = "GAME OVER";
-                    yield return WaitAnyKey;
-                    SceneManager.LoadScene(0);
+                    SceneManager.LoadScene("GameOver");
                     break;
             }
 
