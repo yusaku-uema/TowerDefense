@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -16,10 +17,29 @@ public class Player : MonoBehaviour
     //選択中の弓
     public Bow selectBow;
 
+    //設置音
+    public AudioClip establishment;
+    //レベルアップ
+    public AudioClip levelup;
+    //売却音
+    public AudioClip sale;
+    //選択音
+    public AudioClip selection;
+
+    AudioSource audioSource;
+
+
+    void Start()
+    {
+        //Componentを取得
+        audioSource = GetComponent<AudioSource>();
+    }
+
     //指定の場所に弓の建設が出来る
     public void CreateBow(Transform t)
     {
         if (gold < 100) return;
+        audioSource.PlayOneShot(establishment);
         gold -= 100;
         selectBow = Instantiate(bowPrefab, t);
         selectBow.transform.localPosition = Vector3.zero;
@@ -30,6 +50,7 @@ public class Player : MonoBehaviour
     {
         if (selectBow == null) return;  //何も選択されていない
         if (gold < selectBow.Cost) return; //所持金が足りない
+        audioSource.PlayOneShot(levelup);
         gold -= selectBow.Cost;
         selectBow.lv++;
     }
@@ -40,6 +61,7 @@ public class Player : MonoBehaviour
         if (selectBow == null) return;
         gold += selectBow.Price;
         Destroy(selectBow.gameObject);
+        audioSource.PlayOneShot(sale);
         selectBow = null;
     }
 
@@ -62,6 +84,7 @@ public class Player : MonoBehaviour
             }
             else
             {
+                audioSource.PlayOneShot(selection);
                 selectBow = childBow;
             }
         }

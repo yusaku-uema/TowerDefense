@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class StageSelect : MonoBehaviour
 {
     public String textAsset;
+    
 
     public void StartButton()
     {

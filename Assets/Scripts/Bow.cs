@@ -7,6 +7,10 @@ public class Bow : MonoBehaviour
 
     public Arrow arrowPrefab;
 
+    //SE
+    private AudioSource audioSource;
+        
+
     //ã|LV
     public int lv = 1;
     //LVÇ…âûÇ∂ÇΩçUåÇîÕàÕ
@@ -21,6 +25,7 @@ public class Bow : MonoBehaviour
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         StartCoroutine(SearchAndShot());
     }
 
@@ -34,6 +39,7 @@ public class Bow : MonoBehaviour
             {
                 transform.rotation = Quaternion.FromToRotation(Vector3.right, collider.transform.position - transform.position);
                 var arrow = Instantiate(arrowPrefab, transform.position, transform.rotation);
+                audioSource.Play();
                 arrow.targetEnemy = collider.GetComponent<Enemy>();
             }
         }

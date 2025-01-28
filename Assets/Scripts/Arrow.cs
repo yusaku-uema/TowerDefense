@@ -10,6 +10,15 @@ public class Arrow : MonoBehaviour
     //移動スピード
     private float speed = 10;
 
+    //SE
+    private AudioSource audioSource;
+
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     void Update()
     {
         if (targetEnemy == null)
@@ -23,9 +32,11 @@ public class Arrow : MonoBehaviour
 
         if (v.magnitude < 0.7f)
         {
+
+           
             targetEnemy.hp -= 1;
-            //targetEnemy.OnTriggerEnter2D();
-            
+            audioSource.Play();
+
             if (targetEnemy.hp <= 0)
             {
                 Destroy(targetEnemy.gameObject);
